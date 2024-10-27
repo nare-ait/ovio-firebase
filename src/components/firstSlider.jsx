@@ -41,10 +41,12 @@ export default function Slider({ slides, texts }) {
             >
                 &#10095;
             </button>
-            <div className="absolute font-[Arial,serif,Montserrat arm, Montserrat rus,] top-[300px] tracking-[0px] font-light leading-[4.571rem] mb-0 text-[3.714rem] left-[100px] text-piruz   p-3 rounded w-[500px]">
+            <div className="absolute top-[300px] left-[100px] w-[500px] p-3 text-piruz font-light text-[3.714rem] tracking-[0px] leading-[4.571rem]">
                 {texts[currentSlide]}
+                <button className="mt-10 bg-piruz flex items-center justify-center text-[20px] w-[200px] h-[40px] text-white rounded">
+                    Միացիր հիմա
+                </button>
             </div>
-
         </div>
     );
 }

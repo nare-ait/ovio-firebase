@@ -8,7 +8,8 @@ export default {
     extend: {
       colors: {
         piruz: '#04eed2', 
-        purple:'#53079d'
+        purple:'#53079d',
+        gray:'#808080'
       },
     },
   },

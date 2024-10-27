@@ -1,6 +1,10 @@
 import LoginPage from './pages/log-in'; 
 import Header from './components/header';
 import Slider from './components/firstSlider';
+import WhyOvio from './components/whyOvio';
+import Arajarkner from './components/arajarkner';
+import Video from './components/ovioVideo';
+
 import bacahaytir from "./assets/bacahaytir2.png";
 import bacahaytir2 from "./assets/bacahaytir3.png";
 import games from './assets/games.png'
@@ -25,6 +29,9 @@ function App() {
             <div className='w-3/4 m-auto pt-12'>
                 <Slider slides={slides} texts={texts} />
             </div>
+            <WhyOvio />
+            <Arajarkner />
+            <Video />
         </>
     );
 }

@@ -21,7 +21,7 @@ export default function Header() {
                     <img className="w-6 ml-[70px]" src={people} alt="" />
                     <p className="font-bold">Մուտք</p>
                     <button
-                        className="bg-purple-700 w-56 ml-8 text-white font-semibold py-3 px-2 rounded-lg hover:bg-purple-400"
+                        className="bg-purple w-56 ml-8 text-white font-semibold py-3 px-2 rounded-lg hover:bg-purple-400"
                     >
                         Միացի՛ր Հիմա
                     </button>
