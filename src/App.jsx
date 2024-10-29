@@ -4,9 +4,12 @@ import Slider from './components/firstSlider';
 import WhyOvio from './components/whyOvio';
 import Arajarkner from './components/arajarkner';
 import Video from './components/ovioVideo';
+import Comforte from './components/comforteWithUs';
+import Photo from './components/photoBackground'
+import Footer from './components/footer';
 
+const bacahaytir2 = ['https://ovio.am/storage/uploads/special_offers//2kcacxfLLWnelU3kBUBifDVTFrsxYi0XSbA29vTz.png']
 import bacahaytir from "./assets/bacahaytir2.png";
-import bacahaytir2 from "./assets/bacahaytir3.png";
 import games from './assets/games.png'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
@@ -32,6 +35,9 @@ function App() {
             <WhyOvio />
             <Arajarkner />
             <Video />
+            <Comforte />
+            <Photo />
+            <Footer />
         </>
     );
 }

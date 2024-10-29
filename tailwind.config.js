@@ -9,7 +9,9 @@ export default {
       colors: {
         piruz: '#04eed2', 
         purple:'#53079d',
-        gray:'#808080'
+        gray:'#808080',
+        black:"#101828",
+        lightBlack:"#444"
       },
     },
   },

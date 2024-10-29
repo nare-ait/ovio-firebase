@@ -8,7 +8,7 @@ export default function Video() {
                 src="https://www.youtube.com/embed/7w_0wDFemUg" 
                 frameBorder="0"
                 allowFullScreen
-                className="absolute top-[2300px]"
+                className="absolute top-[2400px]"
                 title="YouTube Video"
             ></iframe>
 
@@ -21,7 +21,6 @@ export default function Video() {
                 />
                 
                 <img className='w-64 ml-[370px] ' src={logo} alt="" />
-
             </div>
         </>
     );
