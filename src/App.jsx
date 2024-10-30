@@ -10,6 +10,7 @@ import Video from './components/ovioVideo';
 import Comforte from './components/comforteWithUs';
 import Photo from './components/photoBackground';
 import Footer from './components/footer';
+import Message from './components/message';
 
 import bacahaytir from "./assets/bacahaytir2.png";
 import games from './assets/games.png';
@@ -28,8 +29,8 @@ function App() {
     };
 
     let slides = [
-        bacahaytir,
         "https://ovio.am/storage/uploads/special_offers//2kcacxfLLWnelU3kBUBifDVTFrsxYi0XSbA29vTz.png",
+        bacahaytir,
         games,
     ];
     let texts = [
@@ -56,6 +57,7 @@ function App() {
                                 <Comforte />
                                 <Photo />
                                 <Footer />
+                                <Message />
                             </>
                         ) : (
                             <Navigate to="/login" replace />

@@ -12,7 +12,7 @@ export default function Slider({ slides, texts }) {
     };
 
     return (
-        <div className="overflow-hidden w-[1900px] h-[850px] top-[130px] absolute left-0 bg-purple max-xl:w-[80vw] max-xl:h-[60vh] max-xl:top-[100px]">
+        <div className="overflow-hidden w-[1900px] h-[850px] top-[130px] absolute left-0 bg-purple max-xl:w-[80vw] max-xl:h-[60vh] max-xl:w-[1600px]">
             <div
                 className="flex transition-transform duration-500"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}

@@ -11,11 +11,10 @@ export default {
         gray:'#808080',
         black:"#101828",
         lightBlack:"#444",
-
       },
-    },
-    screens: {
-      'max-2xl': { 'max': '1800px' }, 
+      screens: {
+        'max-xl': {'max': '1800px'},  // Custom breakpoint for max width 1800px
+      },
     },
   },
   plugins: [],
