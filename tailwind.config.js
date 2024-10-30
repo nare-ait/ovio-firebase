@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    // "./index.html",
     "./src/**/*.jsx",
   ],
   theme: {
@@ -11,8 +10,12 @@ export default {
         purple:'#53079d',
         gray:'#808080',
         black:"#101828",
-        lightBlack:"#444"
+        lightBlack:"#444",
+
       },
+    },
+    screens: {
+      'max-2xl': { 'max': '1800px' }, 
     },
   },
   plugins: [],

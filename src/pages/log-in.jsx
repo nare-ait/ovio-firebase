@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const LogIn = () => {
+const LogIn = ({ onLogin }) => {
   const usernameRef = useRef(null);
   const passwordRef = useRef(null);
   const navigate = useNavigate();
@@ -19,9 +19,8 @@ const LogIn = () => {
     const password = passwordRef.current.value;
 
     if (username === 'nare' && password === 'nare201013') { 
-
       localStorage.setItem('loggedIn', 'true');
-
+      onLogin();
       navigate('/'); 
     } else {
       alert('Incorrect credentials!'); 
