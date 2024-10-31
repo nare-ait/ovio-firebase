@@ -1,20 +1,23 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const school = "https://ovio.am/storage/uploads/banner_list/TBOkzbTXwiHLd04sz6SYZJx7SiDqQ7SV7k5EyUA1.png";
 const camera = "https://ovio.am/storage/uploads/banner_list/waQr5Psvyy6JfTbGfoRsYpKvTzWzeTA91RDGYPzP.png";
 
 export default function Photo() {
-    const title = [
-        "Data Center",
-        "Տեսահսկում բիզնեսի համար"
-    ]
-    const description =[
-        "Ձեր տվյալները՝ Հայաստանի հզորագույն և խոշորագույն Տվյալների մշակման կենտրոնում",
-        "Ապահովե՛ք անվտանգություն և պահե՛ք Ձեր բիզնեսը հսկողության տակ"
-    ]
+    const { t } = useTranslation();
+
+    const titles = [
+        t('title1'),
+        t('title2')
+    ];
+    const descriptions = [
+        t('description1'),
+        t('description2')
+    ];
     const colors = [
-        "bg-purple","bg-teal-300"
-    ]
+        "bg-purple", "bg-teal-300"
+    ];
     const images = [school, camera];
 
     return (
@@ -27,13 +30,13 @@ export default function Photo() {
                         className="w-full h-full brightness-75 object-cover"
                     />
                     <div className="text-center absolute bottom-[200px] left-[150px] text-white text-[40px] font-bold ">
-                            {title[index]}
+                        {titles[index]}
                     </div>
                     <div className="text-left left-[150px] w-[800px] absolute bottom-[100px] text-white text-[20px]">
-                            {description[index]}
+                        {descriptions[index]}
                     </div>
-                    <button className={` absolute w-[200px] top-[430px] left-[150px] h-[50px] rounded bottom-[100px] text-white ${colors[index]}`}>
-                        Իմացիր ավելին 
+                    <button className={`absolute w-[200px] top-[430px] left-[150px] h-[50px] rounded bottom-[100px] text-white ${colors[index]}`}>
+                        {t('buttonText')}
                     </button>
                 </div>
             ))}

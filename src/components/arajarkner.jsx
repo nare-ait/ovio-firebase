@@ -1,9 +1,12 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 const bacahaytir2 = ['https://ovio.am/storage/uploads/special_offers//2kcacxfLLWnelU3kBUBifDVTFrsxYi0XSbA29vTz.png']
 const games = ['https://ovio.am/storage/uploads/special_offers//lDfSbOwifz8qSoJq1Nfrdp0Dywv2FCTL3GDuevYV.png']
 const girl = ['https://ovio.am/storage/uploads/slider/yWYSNPqgkyQ7F7Cbh59nKhxFXq86TEay63YoKBH3.png']
 const girl2 = ['https://ovio.am/storage/uploads/special_offers//MvIdiyQzrs521nb4fLacWx29p2ZMYXBf4AI8mpXp.png']
 export default function Arajarkner() {
+
+    const { t } = useTranslation();
 
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -14,19 +17,18 @@ export default function Arajarkner() {
         girl2
     ];
     const text1 = [
-
-        "4950 ֏՝ 3 ամիս 50% զեղչված գնով",
-        "Վերածի՛ր հին և թույլ համակարգիչը, պլանշետը կամ սմարթֆոնը սուպեր արագ սարքի մեկ քլիքով",
-        "OVIO-ն և Վեգան ներկայացնում են",
-        "Շաբաթ-կիրակին OVIO-ի հետ"
+        t('arajarknerText1Slide1'),
+        t('arajarknerText1Slide2'),
+        t('arajarknerText1Slide3'),
+        t('arajarknerText1Slide4')
 
     ];
 
     const text2 = [
-        "Միացի՛ր All in տարեկան III փաթեթին 4950 ֏՝ 3 ամիս 50% զեղչված գնով",
-        "GFN.AM ամպային խաղային ծառայության Premium բաժանորդագրություն",
-        "Կատարի՛ր գնումներ ՄԵԾԱԾԱԽ գներով Վեգայից` դառնալով OVIO-ի բաժանորդ",
-        "weekend-ը նոր արագություններով",
+        t('arajarknerText2Slide1'),
+        t('arajarknerText2Slide2'),
+        t('arajarknerText2Slide3'),
+        t('arajarknerText2Slide4')
     ]
 
 

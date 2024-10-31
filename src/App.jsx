@@ -11,9 +11,8 @@ import Comforte from './components/comforteWithUs';
 import Photo from './components/photoBackground';
 import Footer from './components/footer';
 import Message from './components/message';
+import Places from './pages/places'
 
-import bacahaytir from "./assets/bacahaytir2.png";
-import games from './assets/games.png';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -28,16 +27,7 @@ function App() {
         localStorage.setItem('loggedIn', 'true');
     };
 
-    let slides = [
-        "https://ovio.am/storage/uploads/special_offers//2kcacxfLLWnelU3kBUBifDVTFrsxYi0XSbA29vTz.png",
-        bacahaytir,
-        games,
-    ];
-    let texts = [
-        "Միացի՛ր All in տարեկան III-ին ♡ 4950 դրամով՝ 9900-ի փոխարեն",
-        "Բարի գալուստ OVIO",
-        "Զգա՛ խաղը, փոխի՛ր իրականությունը"
-    ];
+
 
     return (
         <Router>
@@ -49,7 +39,7 @@ function App() {
                             <>
                                 <Header />
                                 <div className='w-3/4 m-auto pt-12'>
-                                    <Slider slides={slides} texts={texts} />
+                                    <Slider/>
                                 </div>
                                 <WhyOvio />
                                 <Arajarkner />
@@ -71,6 +61,7 @@ function App() {
                     }
                 />
                 <Route path="/register" element={<Registration />} />
+                <Route path="/places" element={<Places />} />
             </Routes>
         </Router>
     );

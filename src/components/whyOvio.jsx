@@ -1,24 +1,26 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function WhyOvio() {
+    const { t } = useTranslation();
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const colors = ["bg-teal-500", "bg-purple", "bg-teal-500", "bg-purple", "bg-teal-500"];
     const texts = [
-        "Հուսալի է",
-        "Կայուն է",
-        "Վստահելի է",
-        "Նորարար է",
-        "Ճկուն է"
+        t("Reliable"),
+        t("Stable"),
+        t("Trustworthy"),
+        t("Innovative"),
+        t("Flexible")
+    ];
+    const text2 = [
+        t("Feature1"),
+        t("Feature2"),
+        t("Feature3"),
+        t("Feature4"),
+        t("Feature5")
     ];
     const numbers = ["1", "2", "3", "4", "5"];
-    const text2 = [
-        "Երեք միջազգային կապուղիներ դեպի Ռուսաստան և Եվրոպա",
-        "Համացանցի դիվերսիֆիկացված միջազգային ռեսուրսներ",
-        "Տասնյակ հազարավոր բաժանորդներ ՀՀ 19 քաղաքներում",
-        "Արդի տեխնոլոգիական լուծումներ և ծառայություններ",       
-        "Ծառայությունների ընտրության լայն հնարավորություն",
-    ];
 
     const nextSlide = () => {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % texts.length);
@@ -30,9 +32,9 @@ export default function WhyOvio() {
     return (
         <>
             <div className="mt-[900px] ml-[200px] text-black font-bold text-[30px]">
-                <p>Ինչու՞ OVIO</p>
+                <p>{t("WhyOvio")}</p>
             </div>
-            <div className="relative w-[1900px] h-[400px]  mx-auto mt-8 bg-purple-900 rounded-r-full overflow-hidden flex items-center">
+            <div className="relative w-[1900px] h-[400px] mx-auto mt-8 bg-purple-900 rounded-r-full overflow-hidden flex items-center">
                 <div
                     className="flex ml-[190px] transition-transform duration-500"
                     style={{ transform: `translateX(-${currentSlide * (100 / 3.5)}%)` }}
@@ -40,7 +42,7 @@ export default function WhyOvio() {
                     {texts.map((text, index) => (
                         <div
                             key={index}
-                            className={`flex-shrink-0 border rounded-lg w-[calc(100%/3.5)] h-[200px] mx-2 flex flex-col justify-center`}
+                            className="flex-shrink-0 border rounded-lg w-[calc(100%/3.5)] h-[200px] mx-2 flex flex-col justify-center"
                         >
                             <div className={`absolute top-0 w-[100px] h-[200px] ${colors[index]} rounded-r-full flex items-center justify-center`}>
                                 <div className="text-white font-bold text-[35px]">

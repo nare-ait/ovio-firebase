@@ -1,7 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function Registration() {
+    
+    const { t } = useTranslation();
+
+
     const [formData, setFormData] = useState({ username: '', email: '', password: '' });
 
     const handleChange = (e) => {
@@ -10,15 +15,14 @@ export default function Registration() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle registration logic here
     };
 
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-100">
             <form onSubmit={handleSubmit} className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg space-y-6">
-                <h2 className="text-2xl font-semibold text-center text-gray-800">Գրանցում</h2>
+                <h2 className="text-2xl font-semibold text-center text-gray-800">{t("joinNowAfter")}</h2>
                 <div>
-                    <label className="block mb-1 font-semibold text-gray-600">Անուն</label>
+                    <label className="block mb-1 font-semibold text-gray-600">{t("nameOfJoin")}</label>
                     <input
                         type="text"
                         name="username"
@@ -29,7 +33,7 @@ export default function Registration() {
                     />
                 </div>
                 <div>
-                    <label className="block mb-1 font-semibold text-gray-600">Էլ․ հասցե</label>
+                    <label className="block mb-1 font-semibold text-gray-600">{t("postOfJoin")}</label>
                     <input
                         type="email"
                         name="email"
@@ -40,7 +44,7 @@ export default function Registration() {
                     />
                 </div>
                 <div>
-                    <label className="block mb-1 font-semibold text-gray-600">Գաղտնաբառ</label>
+                    <label className="block mb-1 font-semibold text-gray-600">{t("passwordOfJoin")}</label>
                     <input
                         type="password"
                         name="password"
@@ -55,7 +59,7 @@ export default function Registration() {
                     type="submit"
                     className="w-full py-3 text-white bg-purple rounded-lg font-semibold hover:bg-purple-600 transition duration-300"
                 >
-                    Գրանցվել
+                    {t("joinNowAfter")}
                 </button>
                 </Link>
             </form>
