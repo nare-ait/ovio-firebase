@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import messageIcon from "../assets/download.png";
-import App from "../../frontend-chat/src/App";  
+import React, { useState } from 'react';
+import messageIcon from '../assets/download.png';
 
 export default function Message() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -33,25 +32,63 @@ export default function Message() {
           )}
         </button>
 
-        {isModalOpen && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-            <div className="bg-white rounded shadow-lg h-[600px] w-[400px] overflow-hidden relative">
-              <div className="w-full bg-purple py-4 px-6 text-white text-lg font-bold flex justify-between items-center">
-                <span>Firebase Chat</span>
-                <button
-                  onClick={() => setModalOpen(false)}
-                  className="text-white text-xl font-bold"
-                >
-                  ✕
-                </button>
-              </div>
-              <div className="p-4 h-full">
-                <App />
-              </div>
+                {isModalOpen && (
+                    <div className="fixed inset-0 ml-[1400px] flex items-center justify-center">
+                    <div className="bg-white rounded shadow-lg h-[550px] w-[350px]">
+                        <div className='w-full h-[200px] bg-purple'>
+                            <h2 className="text-lg text-white p-8 text-center">
+                                Խնդրում ենք գրել հարցը, մեր մասնագետները հնարավորինս արագ կպատասխանեն Ձեզ
+                            </h2>
+                        </div>
+
+                        <div className='w-[300px] h-[300px] border-l-2 left-[100px] border-purple bg-white absolute top-[380px]'>
+                            <form onSubmit={handleSubmit}>
+                                <input
+                                    type="text"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                    placeholder="*Անունը"
+                                    className="p-2 border-t border-gray w-full mb-4 rounded"
+                                    required
+                                />
+                                <input
+                                    type="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder="*Էլ հասցե"
+                                    className="p-2 border-t border-gray w-full mb-4 rounded"
+                                    required
+                                />
+                                <input
+                                    type="number"
+                                    value={phone}
+                                    onChange={(e) => setPhone(e.target.value)}
+                                    placeholder="*Հեռախոսահամար"
+                                    className="p-2 border-t border-gray w-full mb-4 rounded"
+                                    required
+                                />
+                                <textarea
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
+                                    placeholder="*Նամակ"
+                                    className="p-2 w-full border-b border-gray h-[70px] mb-4 rounded"
+                                    required
+                                />
+
+                                <button
+                                    type="submit"
+                                    className="bg-purple mt-[20px] text-white rounded-lg p-2 w-full mb-2"
+                                    disabled={isLoading}
+                                >
+                                    {isLoading ? 'Sending...' : 'Ուղարկել  >>>>>>'}
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                )}
             </div>
-          </div>
-        )}
-      </div>
-    </div>
-  );
+        </div>
+    );
 }
