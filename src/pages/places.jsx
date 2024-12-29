@@ -1,10 +1,10 @@
-import { useTranslation } from 'react-i18next'; // Import useTranslation
+import { useTranslation } from 'react-i18next';
 import Header from '../components/header';
 import data from '../placesData';
 import { useState } from 'react';
 
 export default function Places() {
-    const { t } = useTranslation(); // Get the t function for translations
+    const { t } = useTranslation(); 
 
     const [searchInput, setSearchInput] = useState('');
 
@@ -46,8 +46,8 @@ export default function Places() {
                 <div className="w-full max-w-lg">
                     {filteredPlace.map((location, index) => (
                         <div key={index} className="p-4 mb-4 bg-white shadow rounded-md">
-                            <h2 className="text-lg font-semibold">{t(location.title)}</h2> {/* Translate title */}
-                            <p className="text-gray-600">{t(location.place)}</p> {/* Translate place */}
+                            <h2 className="text-lg font-semibold">{t(location.title)}</h2> 
+                            <p className="text-gray-600">{t(location.place)}</p> 
                         </div>
                     ))}
                 </div>
