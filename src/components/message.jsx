@@ -11,7 +11,7 @@ export default function Message() {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     setButtonLoading(false);
-    setModalOpen(!isModalOpen); // Toggle the modal state
+    setModalOpen(!isModalOpen); 
   };
 
   return (
