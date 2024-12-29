@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import messageIcon from "../assets/download.png";
-import App from "../../frontend-chat/src/App"; 
+import App from "./ChatApp"; 
 
 export default function Message() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -19,7 +19,7 @@ export default function Message() {
       <div className="relative">
         <button
           onClick={toggleModal}
-          className="bg-purple rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-300"
+          className="bg-green rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-300"
           disabled={isButtonLoading}
         >
           {isButtonLoading ? (
@@ -46,6 +46,7 @@ export default function Message() {
                 </button>
               </div>
               <div className="p-4 h-full">
+                {/* Render your Firebase Chat Component */}
                 <App />
               </div>
             </div>
