@@ -20,7 +20,7 @@ export default function Places() {
                 <div className="w-full max-w-lg flex items-center bg-white shadow-md rounded-full overflow-hidden mb-6">
                     <input
                         type="text"
-                        placeholder={t('Search for places...')} // Use translation here
+                        placeholder={t('Search for places...')}
                         value={searchInput}
                         onChange={(e) => setSearchInput(e.target.value)}
                         className="w-full px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-l-full"
