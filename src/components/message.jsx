@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import messageIcon from "../assets/download.png";
-import App from "../../frontend-chat/src/App";  
+import App from "../../chat-project/src/App.jsx";  
 
 export default function Message() {
   const [isModalOpen, setModalOpen] = useState(false);
